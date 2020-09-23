@@ -1,0 +1,15 @@
+asgiref==3.2.7
+Django==3.0.6
+django-cors-headers==3.3.0
+django-crispy-forms==1.9.2
+django-filter==2.3.0
+django-node==4.0.0
+django-webpack==3.1.1
+django-webpack-loader==0.7.0
+djangorestframework==3.11.0
+drf-pretty-exception-handler==0.1.1
+gunicorn==20.0.4
+loader==2017.9.11
+optional-django==0.1.0
+pytz==2020.1
+whitenoise==5.2.0

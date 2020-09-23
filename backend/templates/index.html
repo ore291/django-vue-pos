@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+{% load render_bundle from webpack_loader %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'backend/css/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/OverlayScrollbars.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/icheck-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/bootstrap-switch.min.css' %}">
+    <link rel="stylesheet" href="{% static 'backend/css/adminlte.min.css' %}">
+    
+    <title>Knight-POS</title>
+</head>
+
+<body class="hold-transition sidebar-mini sidebar-collapse layout-fixed">
+    <div class="wrapper">
+        <div id="app"></div>
+    </div>
+    {% render_bundle 'main' %}
+
+    <script src="{% static 'backend/plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
+    <script src="{% static 'backend/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'backend/dist/js/adminlte.min.js' %}"></script>
+    
+</body>
+
+</html>
