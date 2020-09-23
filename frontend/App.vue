@@ -1,4 +1,6 @@
 <template>
+    <div class="hold-transition sidebar-mini sidebar-collapse layout-fixed">
+    <div class="wrapper">
     <div id="app" class="layout-navbar-fixed">
        <Header/>
        <Sidebar/>
@@ -11,6 +13,8 @@
             <router-view/>
         </div>
        <Footer/>  
+    </div>
+    </div>
     </div>
    
 </template>
@@ -60,6 +64,11 @@ export default {
 }
 </script>
 
+<style src='admin-lte/dist/css/adminlte.min.css'></style>
+<style src='admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css'></style>
+<style src='admin-lte/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.min.css'></style>
+<style src='bootstrap/dist/css/bootstrap.min.css'></style>
+
 <style>
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -68,7 +77,6 @@ export default {
     color: #2c3e50;
     
 }
-
 
 .layout-fixed .main-sidebar {
     bottom: 0;    

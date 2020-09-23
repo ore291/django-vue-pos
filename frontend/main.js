@@ -9,16 +9,17 @@ import '@andresouzaabreu/vue-data-table/dist/DataTable.css'
 import { ValidationProvider } from 'vee-validate/dist/vee-validate.full.esm';
 import {ValidationObserver} from 'vee-validate'
 import regeneratorRuntime from 'regenerator-runtime'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import jquery from 'jquery'
 import 'bootstrap/dist/js/bootstrap.min.js'
-
+import 'admin-lte/dist/js/adminlte.min.js'
+import 'admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'
 
 
 Vue.component('ValidationProvider', ValidationProvider)
 Vue.component('ValidationObserver', ValidationObserver)
 Vue.config.productionTip = false
 Vue.use(require('regenerator-runtime/runtime'))
-
+Vue.use(jquery)
 
 
 Vue.component("data-table", DataTable)

@@ -2,7 +2,7 @@
    <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="#" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="../assets/logo.png" alt="" class="brand-image img-circle elevation-2"
            style="opacity: .8">
       <span class="brand-text font-weight-light">KNIGHT STORES</span>
     </a>
@@ -104,7 +104,7 @@ export default {
 }
 </script>
 
-<style>
+<style src='admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css'>
 .router-link-exact-active{
   background-color:turquoise;
   color: white !important;
