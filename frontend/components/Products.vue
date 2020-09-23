@@ -143,7 +143,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import { required, minLength, maxLength } from "vuelidate/lib/validators";
+
 
 export default {
   data() {
@@ -155,12 +155,6 @@ export default {
       description: null,
       submitted: false,
     };
-  },
-  validations: {
-    name: {
-      required,
-      minLength: minLength(4)
-    }
   },
   computed: {
     ...mapGetters({
