@@ -5,12 +5,13 @@ def increment_trans_no ():
     last_trans = Orders.objects.all().order_by('id').last()    
     if not last_trans:
         return 'TRNS001'
-    trans_no = last_trans.trans_id
-    trans_int = int(trans_no.split('TRNS')[-1])
-    new_trans_int = trans_int + 1
-    new_trans_no = "TRNS" + '00' + str(new_trans_int)
-    
-    return new_trans_no
+    else:
+        trans_no = last_trans.trans_id
+        trans_int = int(trans_no.split('TRNS')[-1])
+        new_trans_int = trans_int + 1
+        new_trans_no = "TRNS" + '00' + str(new_trans_int)
+        
+        return new_trans_no
 
 
 
@@ -34,7 +35,7 @@ class ProductCategory(models.Model):
 class Product(models.Model):
   name = models.CharField(max_length=200, unique=True)
   price = models.DecimalField(max_digits=9, decimal_places=2)
-  description = models.CharField(max_length= 300, default='description not available', null=True)
+  description = models.CharField(max_length= 300, default='description not available')
   quantity = models.IntegerField(default=1)
   category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, related_name='products', default=1)
 
