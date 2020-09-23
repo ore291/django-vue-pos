@@ -1,2 +1,2 @@
-release: python ./manage collectstatic --noinput
+release: python ./manage collectstatic migrate
 web: gunicorn backend.wsgi --log-file -
