@@ -5,13 +5,13 @@ def increment_trans_no ():
     last_trans = Orders.objects.all().order_by('id').last()    
     if not last_trans:
         return 'TRNS001'
-    else:
-        trans_no = last_trans.trans_id
-        trans_int = int(trans_no.split('TRNS')[-1])
-        new_trans_int = trans_int + 1
-        new_trans_no = "TRNS" + '00' + str(new_trans_int)
-        
-        return new_trans_no
+
+    trans_no = last_trans.trans_id
+    trans_int = int(trans_no.split('TRNS')[-1])
+    new_trans_int = trans_int + 1
+    new_trans_no = "TRNS" + '00' + str(new_trans_int)
+    
+    return new_trans_no
 
 
 
