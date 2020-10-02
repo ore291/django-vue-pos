@@ -13,3 +13,5 @@ loader==2017.9.11
 optional-django==0.1.0
 pytz==2020.1
 whitenoise==5.2.0
+psycopg2-binary 
+dj-database-url
