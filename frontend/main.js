@@ -11,26 +11,20 @@ import {ValidationObserver} from 'vee-validate'
 import regeneratorRuntime from 'regenerator-runtime'
 import jquery from 'jquery'
 import 'bootstrap/dist/js/bootstrap.min.js'
-<<<<<<< HEAD
 import 'admin-lte/dist/js/adminlte.min.js'
 import 'admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'
 
-=======
+
 import adminLte from "admin-lte"
-import "admin-lte/dist/css/adminLTE.css";
-import "admin-lte/dist/css/skins/_all-skins.css";
->>>>>>> 03f7d0aaafc4f34a12e5c5ecf564b55ec4a6ae8a
+
 
 Vue.component('ValidationProvider', ValidationProvider)
 Vue.component('ValidationObserver', ValidationObserver)
 Vue.config.productionTip = false
 Vue.use(require('regenerator-runtime/runtime'))
-<<<<<<< HEAD
+
 Vue.use(jquery)
 
-=======
-Vue.use(require(adminLte));
->>>>>>> 03f7d0aaafc4f34a12e5c5ecf564b55ec4a6ae8a
 
 Vue.component("data-table", DataTable)
  
