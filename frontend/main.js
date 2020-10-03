@@ -19,7 +19,7 @@ Vue.component('ValidationProvider', ValidationProvider)
 Vue.component('ValidationObserver', ValidationObserver)
 Vue.config.productionTip = false
 Vue.use(require('regenerator-runtime/runtime'))
-Vue.use(require(adminLte)
+Vue.use(require(adminLte));
 
 Vue.component("data-table", DataTable)
  
