@@ -12,7 +12,8 @@ import regeneratorRuntime from 'regenerator-runtime'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
-
+import "~admin-lte/dist/css/adminLTE.css";
+import "~admin-lte/dist/css/skins/_all-skins.css";
 
 Vue.component('ValidationProvider', ValidationProvider)
 Vue.component('ValidationObserver', ValidationObserver)
