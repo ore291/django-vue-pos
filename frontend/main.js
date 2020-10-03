@@ -11,7 +11,7 @@ import {ValidationObserver} from 'vee-validate'
 import regeneratorRuntime from 'regenerator-runtime'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
-
+import adminLte from "admin-lte"
 import "~admin-lte/dist/css/adminLTE.css";
 import "~admin-lte/dist/css/skins/_all-skins.css";
 
@@ -19,8 +19,7 @@ Vue.component('ValidationProvider', ValidationProvider)
 Vue.component('ValidationObserver', ValidationObserver)
 Vue.config.productionTip = false
 Vue.use(require('regenerator-runtime/runtime'))
-
-
+Vue.use(require(adminLte)
 
 Vue.component("data-table", DataTable)
  
