@@ -13,5 +13,6 @@ urlpatterns = [
     url('', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace ='rest_framework')),
     path('order/', order, name='order'),
+    # path('transactions/', TransactionList, name='orders'),
     url('user-auth/', user_auth, name="user_auth")
 ]

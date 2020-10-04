@@ -7,6 +7,7 @@ import json
 from .serializers import CustomProductSerializer, CategorySerializer, TransactionSerializer
 from .models import Product, ProductCategory, OrderItems, Orders
 from django.http import JsonResponse, HttpResponse
+from rest_framework.generics import ListAPIView
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
@@ -19,11 +20,15 @@ class CategoryViewSet(viewsets.ModelViewSet):
     queryset = ProductCategory.objects.all()
     serializer_class = CategorySerializer
 
-class TransactionViewSet(viewsets.ModelViewSet):
+# class TransactionViewSet(viewsets.ModelViewSet):
+#     queryset = Orders.objects.all()
+#     serializer_class = TransactionSerializer
+
+class TransactionViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Orders.objects.all()
     serializer_class = TransactionSerializer
 
-       
+
 def order(request):
     if request.method == 'POST':
         data = json.loads(request.body)
