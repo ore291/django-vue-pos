@@ -53,6 +53,7 @@
                           id="txtidsales"
                           :value="trans_id"
                           disabled
+                          placeholder="transaction no."
                         />
                       </div>
                     </div>
@@ -206,7 +207,7 @@ export default {
     return {
       cartItem: null,
       trans_id: null,
-      payMode: 'a',
+      payMode: "a",
     };
   },
   components: {
@@ -219,7 +220,7 @@ export default {
       var data = {
         product_ids: this.product_ids,
         total_price: this.total,
-        payment_mode: this.payMode
+        payment_mode: this.payMode,
       };
       const payload = JSON.stringify(data);
       api
@@ -274,7 +275,7 @@ export default {
       products: "products/products",
       username: "transaction/username",
       product_ids: "cart/cartIds",
-      cartItemsTotal: "cart/cartItemsTotal"
+      cartItemsTotal: "cart/cartItemsTotal",
     }),
     date() {
       return this.$moment().format("Do MMM, YYYY");

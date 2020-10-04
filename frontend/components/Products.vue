@@ -44,7 +44,7 @@
             <div class="modal-body">
               <ValidationObserver v-slot="{ handleSubmit }" ref="observer">
                 <form @submit.prevent="handleSubmit(addProduct)" ref="productForm">
-                  <ValidationProvider name="name" vid="name" rules="required|alpha_num" v-slot="{ errors }">
+                  <ValidationProvider name="name" vid="name" rules="required|max_value:200" v-slot="{ errors }">
                     <div class="form-group">
                     <label for="name">Product Name</label>
                     <input class="form-control" v-model="name" type="text">
@@ -102,7 +102,7 @@
                       <span>{{ errors[0] }}</span>
                     </ValidationProvider>
                     </div>
-                  <ValidationProvider name="Description" vid="description" rules="required" v-slot="{ errors }">
+                  <ValidationProvider name="Description" vid="description" rules="required|max_value:200" v-slot="{ errors }">
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1"
                     >Product Description</label
