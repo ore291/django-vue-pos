@@ -151,8 +151,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 
 
-DATABASES['default'] = 
-
 
 try:
     from .local import *    
